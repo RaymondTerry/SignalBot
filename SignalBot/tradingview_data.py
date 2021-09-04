@@ -53,7 +53,12 @@ def buy_or_sell_eos():
         sms_api.send_buy_eos_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.04) == True and price > ema_200:
+    if blue_line <= 0.200 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.04) == True and price > ema_200:
+        print("GOOD TIME TO ENTER TRADE EOS")
+        sms_api.send_buy_eos_sms()
+    else: pass
+    
+    if blue_line > 0.240 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.04) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT EOS")
         sms_api.send_sell_eos_sms()
     else: pass
@@ -107,7 +112,12 @@ def buy_or_sell_xrp():
         sms_api.send_buy_xrp_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.009) == True and price > ema_200:
+    if blue_line <= 0.100 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.009) == True and price > ema_200:
+        print("GOOD TIME TO ENTER TRADE XRP")
+        sms_api.send_buy_xrp_sms()
+    else: pass
+
+    if blue_line > 0.100 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.009) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT XRP")
         sms_api.send_sell_xrp_sms()
     else: pass
@@ -154,11 +164,11 @@ def buy_or_sell_bch():
     else: pass
     
     if blue_line <= 0 and orange_line <= 0 and math.isclose(blue_line, orange_line, abs_tol = 0.90) == True > ema_200:
-        print("GOOD TIME TO ENTER TRADE")
+        print("GOOD TIME TO ENTER TRADE BCH")
         sms_api.send_buy_bch_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 1.00) == True and price > ema_200:
+    if blue_line > 30 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 1.00) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT BCH")
         sms_api.send_sell_bch_sms()
     else: pass
@@ -209,7 +219,12 @@ def buy_or_sell_dash():
         sms_api.send_buy_dash_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.20) == True and price > ema_200:
+    if blue_line <= 17 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.20) == True and price > ema_200:
+        print("GOOD TIME TO ENTER TRADE DASH")
+        sms_api.send_buy_dash_sms()
+    else: pass
+    
+    if blue_line > 17 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.20) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT DASH")
         sms_api.send_sell_dash_sms()
     else: pass
@@ -260,7 +275,12 @@ def buy_or_sell_xlm():
         sms_api.send_buy_xlm_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.0009) == True and price > ema_200:
+    if blue_line <= 0.0180 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.0009) == True and price > ema_200:
+        print("GOOD TIME TO ENTER TRADE XLM")
+        sms_api.send_buy_xlm_sms()
+    else: pass
+    
+    if blue_line > 0.0180 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.0009) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT XLM")
         sms_api.send_sell_xlm_sms()
     else: pass
@@ -311,7 +331,7 @@ def buy_or_sell_btc():
         sms_api.send_buy_btc_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 12.00) == True and price > ema_200:
+    if blue_line > 700 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 12.00) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT BTC")
         sms_api.send_sell_btc_sms()
     else: pass
@@ -362,7 +382,7 @@ def buy_or_sell_eth():
         sms_api.send_buy_eth_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 4.00) == True and price > ema_200:
+    if blue_line > 170 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 4.00) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT ETH")
         sms_api.send_sell_eth_sms()
     else: pass
@@ -413,7 +433,12 @@ def buy_or_sell_link():
         sms_api.send_buy_link_sms()
     else: pass
     
-    if blue_line > 0 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.15) == True and price > ema_200:
+    if blue_line <= 1.65 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.15) == True and price > ema_200:
+        print("GOOD TIME TO TO ENTER TRADE LINK")
+        sms_api.send_buy_link_sms()
+    else: pass
+
+    if blue_line > 1.65 and orange_line > 0 and math.isclose(blue_line, orange_line, abs_tol = 0.15) == True and price > ema_200:
         print("GOOD TIME TO TAKE PROFIT LINK")
         sms_api.send_sell_link_sms()
     else: pass
