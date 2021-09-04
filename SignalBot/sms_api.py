@@ -4,6 +4,7 @@ from email.message import EmailMessage
 from typing import Tuple, Union
 import sms_auth
 import aiosmtplib
+from cooldown import cooldown
 
 HOST = "smtp.gmail.com"
 # https://kb.sandisk.com/app/answers/detail/a_id/17056/~/list-of-mobile-carrier-gateway-addresses
@@ -46,7 +47,7 @@ async def send_txt(
 
 ''' ALERT SMS's '''
 
-
+@cooldown(seconds=2700)
 def send_eos_sms():
 
     _msg = "                                 EOS NEAR TARGET"
@@ -55,7 +56,7 @@ def send_eos_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_xrp_sms():
 
     _msg = "                                 XRP NEAR TARGET"
@@ -64,7 +65,7 @@ def send_xrp_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_bch_sms():
 
     _msg = "                                 BCH NEAR TARGET"
@@ -73,7 +74,7 @@ def send_bch_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_dash_sms():
 
     _msg = "                                 DASH NEAR TARGET"
@@ -82,7 +83,7 @@ def send_dash_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_eos_ema_sms():
 
     _msg = "                                 EOS daily 20/50 cross"
@@ -91,7 +92,7 @@ def send_eos_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_xrp_ema_sms():
 
     _msg = "                                 XRP daily 20/50 cross"
@@ -100,7 +101,7 @@ def send_xrp_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_bch_ema_sms():
 
     _msg = "                                 BCH daily 20/50 cross"
@@ -109,7 +110,7 @@ def send_bch_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_dash_ema_sms():
 
     _msg = "                                 DASH daily 20/50 cross"
@@ -118,7 +119,7 @@ def send_dash_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_xlm_ema_sms():
 
     _msg = "                                 XLM daily 20/50 cross"
@@ -127,7 +128,7 @@ def send_xlm_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_btc_ema_sms():
 
     _msg = "                                 BTC daily 20/50 cross"
@@ -136,7 +137,7 @@ def send_btc_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_eth_ema_sms():
 
     _msg = "                                 ETH daily 20/50 cross"
@@ -145,7 +146,7 @@ def send_eth_ema_sms():
     asyncio.run(send)
     
 
-
+@cooldown(seconds=2700)
 def send_link_ema_sms():
 
     _msg = "                                 LINK daily 20/50 cross"
@@ -165,6 +166,7 @@ def send_link_ema_sms():
 
 ''' BUY SMS's '''
 
+@cooldown(seconds=2700)
 def send_buy_eos_sms():
 
     _msg = "Good time to DCA into EOS"
@@ -173,7 +175,7 @@ def send_buy_eos_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_xrp_sms():
 
     _msg = "Good time to DCA into XRP"
@@ -182,7 +184,7 @@ def send_buy_xrp_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_bch_sms():
 
     _msg = "Good time to DCA into BCH"
@@ -191,7 +193,7 @@ def send_buy_bch_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_dash_sms():
 
     _msg = "Good time to DCA into DASH"
@@ -200,7 +202,7 @@ def send_buy_dash_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_xlm_sms():
 
     _msg = "Good time to DCA into XLM"
@@ -209,7 +211,7 @@ def send_buy_xlm_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_btc_sms():
 
     _msg = "Good time to DCA into BTC"
@@ -218,7 +220,7 @@ def send_buy_btc_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_eth_sms():
 
     _msg = "Good time to DCA into ETH"
@@ -227,7 +229,7 @@ def send_buy_eth_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_buy_link_sms():
 
     _msg = "Good time to DCA into LINK"
@@ -247,6 +249,7 @@ def send_buy_link_sms():
 
 ''' SELL SMS's '''
 
+@cooldown(seconds=2700)
 def send_sell_eos_sms():
 
     _msg = "Good time to convert EOS into stablecoin"
@@ -255,7 +258,7 @@ def send_sell_eos_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_xrp_sms():
 
     _msg = "Good time to convert XRP into stablecoin"
@@ -264,7 +267,7 @@ def send_sell_xrp_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_bch_sms():
 
     _msg = "Good time to convert BCH into stablecoin"
@@ -273,7 +276,7 @@ def send_sell_bch_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_dash_sms():
 
     _msg = "Good time to convert DASH into stablecoin"
@@ -282,7 +285,7 @@ def send_sell_dash_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_xlm_sms():
 
     _msg = "Good time to convert XLM into stablecoin"
@@ -291,7 +294,7 @@ def send_sell_xlm_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_btc_sms():
 
     _msg = "Good time to convert BTC into stablecoin"
@@ -300,7 +303,7 @@ def send_sell_btc_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_eth_sms():
 
     _msg = "Good time to convert ETH into stablecoin"
@@ -309,7 +312,7 @@ def send_sell_eth_sms():
     asyncio.run(send)
 
 
-
+@cooldown(seconds=2700)
 def send_sell_link_sms():
 
     _msg = "Good time to convert LINK into stablecoin"
