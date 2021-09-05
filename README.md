@@ -47,7 +47,6 @@ Although any improvements are welcome!
 
 ## External imports needed:
 - tradingview_ta
-- requests
 - asyncio
 - aiosmtplib
 - typing
