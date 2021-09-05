@@ -52,7 +52,7 @@ Although any improvements are welcome!
 - typing
 
 
-### How to install on Windows with Python 3
+### How to install imports on Windows with Python 3
 Open Command Prompt: 
 ``
 py -m pip install tradingview_ta
