@@ -52,5 +52,11 @@ Although any improvements are welcome!
 - typing
 
 
+### How to install on Windows with Python 3
+Open Command Prompt: 
+``
+py -m pip install tradingview_ta
+``
+
 
 This was made possible by: https://github.com/brian-the-dev/python-tradingview-ta
