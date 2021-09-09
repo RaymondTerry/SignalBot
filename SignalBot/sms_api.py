@@ -28,7 +28,7 @@ async def send_txt(
 <!DOCTYPE html>
 <html>
     <body>
-        <h1 style="color:SlateGray;">This is HTML to overwite this bad API!</h1> 
+        <h1 style="color:SlateGray;">This is HTML to overwrite this bad API!</h1> 
     </body>
 </html>
 """, subtype='html')
