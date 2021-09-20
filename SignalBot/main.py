@@ -110,13 +110,13 @@ class main:
 
 
 
+if __name__ == "__main__":
 
+    r = main()
+    starttime = time.time()
 
-r = main()
-starttime = time.time()
-
-while(True):
-    r.bos()
-    r.__gt__()
-    r.percentEval()
-    time.sleep(27.0 - ((time.time() - starttime) % 27.0))
+    while(True):
+        r.bos()
+        r.__gt__()
+        r.percentEval()
+        time.sleep(27.0 - ((time.time() - starttime) % 27.0))
