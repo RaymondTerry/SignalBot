@@ -1,6 +1,10 @@
 import tradingview_data
 import sms_api
 import time
+import requests
+import urllib3
+import aiosmtplib.errors
+from bs4 import BeautifulSoup
 
 class main:
 
@@ -92,8 +96,30 @@ class main:
 
 
 
+#""" Checks for when the fear/greed index is in extreme states of fear or greed """
+    def fgi(self):
 
+        url = 'https://alternative.me/crypto/fear-and-greed-index/'
 
+        response = requests.get(url)
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        now = ''
+        
+        for body in soup.find_all('body'):
+            for main in body.find_all('main'):
+                for div in main.find_all('div', {'class': 'status'})[0]:
+                    now = div.text
+                    
+        print('Fear/Greed Index: ' + now)            
+        if now == 'Extreme Fear':
+            print('Exteme Fear on fear/greed index!')
+            sms_api.send_buy_fgi_sms()
+
+        elif now == 'Extreme Greed':
+            print('Exteme Greed on fear/greed index!')
+            sms_api.send_sell_fgi_sms()
 
 
 
@@ -116,7 +142,14 @@ if __name__ == "__main__":
     starttime = time.time()
 
     while(True):
-        r.bos()
-        r.__gt__()
-        r.percentEval()
+        try:
+            r.bos()
+            r.__gt__()
+            r.percentEval()
+            r.fgi()
+        except(requests.exceptions.RequestException, urllib3.exceptions.ReadTimeoutError) as error:
+            print('Connection dropped. . . \n')
+            print('Attempting to reconnect in 27 seconds. . . \n')
+        except aiosmtplib.SMTPAuthenticationError as error:
+            print('\nInvaid credentials for Gmail Account. \n- See sms_api_auth.py to configure credentials.\n- Make sure that "less secure app access" is turned ON in your Gmail account settings')
         time.sleep(27.0 - ((time.time() - starttime) % 27.0))
