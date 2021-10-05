@@ -5,7 +5,7 @@ cls
 title - SignalBot
 date/T 
 time/T
-echo Version: 0.1
+echo Version: 0.2
 echo 			yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyssooo+++ooossyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 echo 			yyyyyyyyyyyyyyyyyyyyyyyyyyys++///////////////+osyyyyyyyyyyyyyyyyyyyyyyyyyyy
 echo 	   		yyyyyyyyyyyyyyyyyyyyyyyys+////+oossyyyyyssoo+////+syyyyyyyyyyyyyyyyyyyyyyyy
