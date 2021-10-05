@@ -50,6 +50,7 @@ Although any improvements are welcome!
 - asyncio
 - aiosmtplib
 - typing
+- bs4
 
 
 ### How to install imports on Windows with Python 3
