@@ -238,7 +238,13 @@ def send_buy_link_sms():
     asyncio.run(send)
     
 
+@cooldown(seconds=10800)
+def send_buy_fgi_sms():
 
+    _msg = "Good time to DCA"
+    _subj = "EXTREME FEAR"
+    send = send_txt(sms_auth.NUMBER, sms_auth.CARRIER, sms_auth.EMAIL, sms_auth.PASS, _msg, _subj)
+    asyncio.run(send)
 
 
 
@@ -317,5 +323,14 @@ def send_sell_link_sms():
 
     _msg = "Good time to convert LINK into stablecoin"
     _subj = "STABLE COIN LINK"
+    send = send_txt(sms_auth.NUMBER, sms_auth.CARRIER, sms_auth.EMAIL, sms_auth.PASS, _msg, _subj)
+    asyncio.run(send)
+
+
+@cooldown(seconds=10800)
+def send_sell_fgi_sms():
+
+    _msg = "Good time to take profits"
+    _subj = "EXTREME GREED"
     send = send_txt(sms_auth.NUMBER, sms_auth.CARRIER, sms_auth.EMAIL, sms_auth.PASS, _msg, _subj)
     asyncio.run(send)
